@@ -1,1 +1,2 @@
-# hortelasantaedwiges.github.io
+# hortelasantaedwiges.github.io - site da aplicação
+em desenvolvimento
