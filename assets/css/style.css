@@ -12,7 +12,7 @@ body {
 
 body {
 	background: rgb(24, 93, 20);
-	background: url("../img/background.jpeg");
+	background: url("../img/background.jpg");
 	background-size: 100%;
 
 	display: flex;
