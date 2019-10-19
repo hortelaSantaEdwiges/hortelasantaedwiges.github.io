@@ -13,19 +13,14 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/img/favicon-32x32.png"
+      href="./assets/img/favicon-32x32.png"
     />
   </head>
   <body>
-    <div style="display: none" id="hideAll">&nbsp;</div>
-
-    <script type="text/javascript">
-      document.getElementById("hideAll").style.display = "block";
-
-      window.onload = function() {
-        document.getElementById("hideAll").style.display = "none";
-      };
-    </script>
+    <div class="loader">
+      <img src="./assets/img/favicon-96x96.png" alt="Loading..." />
+    </div>
+    <script src="./assets/js/loader.js"></script>
 
     <div id="container-central">
       <h1>hortelã santa edwiges</h1>

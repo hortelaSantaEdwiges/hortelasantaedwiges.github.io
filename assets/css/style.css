@@ -42,12 +42,23 @@ input {
 button {
   padding: 15px;
   border-radius: 30px;
-  border: 2px solid rgb(7, 49, 5);
+  border: none;
   background: rgb(7, 49, 5);
   color: whitesmoke;
   font-size: inherit;
   margin: 20px;
   width: 100px;
+}
+
+button:hover {
+  background: rgb(3, 24, 2);
+  color: rgb(255, 254, 254);
+  cursor: pointer;
+}
+
+button:focus {
+  background: rgb(6, 44, 4);
+  color: rgb(252, 218, 218);
 }
 
 a {
@@ -64,12 +75,44 @@ a:hover {
   background: rgb(230, 255, 230);
 }
 
-#hideAll {
+.loader {
   position: fixed;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  background-color: white;
-  z-index: 99; /* Higher than anything else in the document */
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 132, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader > img {
+  width: 100px;
+  height: 100px;
+  animation: scale 0.5s infinite ease-in alternate;
+}
+
+.loader.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
