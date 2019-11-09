@@ -1,3 +1,8 @@
+:root {
+  --verde-escuro: rgb(7, 49, 5);
+  --verde-claro: rgb(179, 253, 169);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +11,12 @@
 }
 
 html,
-body {
+body,
+body > div {
   height: 100%;
+}
+
+body > div {
 }
 
 body {
@@ -15,19 +24,51 @@ body {
   background: url("../img/background.jpg");
   background-size: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: rgb(7, 49, 5);
+  color: var(--verde-escuro);
   font-family: sans-serif;
   font-size: 16px;
 }
 
-h1 {
+header {
+  width: 100%;
+  text-align: center;
+  background: var(--verde-escuro);
+  color: var(--verde-claro);
+  /* padding: 20px; */
+}
+
+header span {
+  align-self: center;
+}
+
+nav {
+  background-color: whitesmoke;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0px;
+}
+
+nav i {
+  text-align: center;
+}
+
+#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#login h1 {
   /* color: ; */
   padding-bottom: 20px;
   text-transform: uppercase;
+}
+
+#app {
+  background: rgba(179, 253, 169, 0.48);
 }
 
 input {
@@ -43,11 +84,18 @@ button {
   padding: 15px;
   border-radius: 30px;
   border: none;
-  background: rgb(7, 49, 5);
+  background: var(--verde-escuro);
   color: whitesmoke;
   font-size: inherit;
   margin: 20px;
   width: 100px;
+
+  margin-bottom: 0;
+}
+
+button.light {
+  color: var(--verde-escuro);
+  background: whitesmoke;
 }
 
 button:hover {
@@ -55,10 +103,29 @@ button:hover {
   color: rgb(255, 254, 254);
   cursor: pointer;
 }
+button.light:hover {
+  background: rgb(255, 254, 254);
+  color: rgb(3, 24, 2);
+}
 
 button:focus {
   background: rgb(6, 44, 4);
   color: rgb(252, 218, 218);
+}
+
+button.light:focus {
+  background: rgb(6, 44, 4);
+  color: rgb(252, 218, 218);
+}
+
+button.discrete {
+  /* padding: 5px; */
+  border-radius: 15px;
+  font-size: 12px;
+  display: flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: fit-content;
 }
 
 a {
@@ -75,7 +142,16 @@ a:hover {
   background: rgb(230, 255, 230);
 }
 
-.loader {
+.hidden {
+  display: none !important;
+}
+
+.fadeout {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+#loader {
   position: fixed;
   z-index: 99;
   top: 0;
@@ -88,15 +164,10 @@ a:hover {
   align-items: center;
 }
 
-.loader > img {
+#loader > img {
   width: 100px;
   height: 100px;
   animation: scale 0.5s infinite ease-in alternate;
-}
-
-.loader.hidden {
-  animation: fadeOut 1s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes scale {
@@ -115,4 +186,43 @@ a:hover {
     opacity: 0;
     visibility: hidden;
   }
+}
+
+.container-central {
+  width: 550px;
+  /* border: 2px solid rgb(182, 230, 146); */
+  background: var(--verde-claro);
+  border-radius: 100px;
+  border-bottom-right-radius: 0;
+  padding: 50px;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.container-central h1 {
+  margin-left: -16px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  margin-right: -16px;
+}
+
+.spacebetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clickable {
+  border: 1px solid azure;
+  padding: 12px;
+  color: azure;
+}
+
+.clickable:hover {
+  background-color: var(--verde-claro);
+  color: black;
+}
+
+.clickable:focus {
+  background-color: cadetblue;
+  color: azure;
 }

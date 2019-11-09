@@ -7,7 +7,6 @@
     <title>Hortelã Santa Edwiges</title>
 
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
 
     <link
       rel="icon"
@@ -17,24 +16,76 @@
     />
   </head>
   <body>
-    <div class="loader">
+    <div id="loader">
       <img src="./assets/img/favicon-96x96.png" alt="Loading..." />
     </div>
-    <script src="./assets/js/loader.js"></script>
 
-    <div id="container-central">
-      <h1>hortelã santa edwiges</h1>
-      <form action="">
-        <input type="text" placeholder="Usuário" />
-        <input type="password" placeholder="Senha" /><br />
+    <div id="login">
+      <div class="container-central">
+        <h1>hortelã santa edwiges</h1>
+        <form action="">
+          <div class="spacebetween">
+            <input id="user" type="text" placeholder="Usuário" />
+            <input id="pass" type="password" placeholder="Senha" /><br />
+          </div>
+          <div class="spacebetween">
+            <button class="light discrete">Recuperar senha</button>
+            <button class="light discrete">Registrar-me</button>
+            <button id="buttonLogin" type="submit">Entrar</button>
+          </div>
+        </form>
 
-        <button>Entrar</button>
-      </form>
-
-      <!-- <br />
-			<br />
+        <!-- <br />
+			<br />\
 			<a href="stylesheet.html"> Folha de estilo padrão </a>
 			<a href="ajaxcrash/index.html">Exemplo do Brad</a> -->
+      </div>
     </div>
+
+    <div id="app" class="hidden">
+      <header class="spacebetween">
+        <span id="menuButton" class="clickable">Menu</span>
+        <h1>Hortelã Santa Edwiges</h1>
+        <span id="pedidosButton" class="clickable">Pedidos</span>
+      </header>
+
+      <main>
+        main
+      </main>
+
+      <footer>
+        <h1>footer</h1>
+      </footer>
+
+      <nav>
+        <i>
+          icone1
+          <br />
+          descricao
+        </i>
+        <i>
+          icone2
+          <br />
+          descricao
+        </i>
+        <i>
+          icone3
+          <br />
+          descricao
+        </i>
+        <i>
+          icone4
+          <br />
+          descricao
+        </i>
+        <i>
+          icone5
+          <br />
+          descricao
+        </i>
+      </nav>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
